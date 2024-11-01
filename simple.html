@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Personal Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #F5F5DC; /* Light Beige */
+            color: #4E3B31; /* Dark Brown */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #A52A2A, #8B0000); /* Reddish Brown Gradient */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            animation: slideDown 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: color 0.3s, background 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            background: #FF6F61; /* Soft Coral */
+            color: #4E3B31; /* Dark Brown */
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.7s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-description {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #4E3B31; /* Dark Brown */
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .section {
+            margin: 50px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.6s;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            color: #8B0000; /* Deep Red */
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-content {
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #A52A2A; /* Reddish Brown */
+            outline: none;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            background: #FF6F61; /* Soft Coral */
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: #FF4500; /* Darker Coral */
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 25px 0;
+            background: #4E3B31; /* Dark Brown */
+            color: white;
+        }
+
+        /* Add responsive design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="profile-description">
+            <p>Welcome to my personal space where I showcase my journey in the tech world.</p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a passionate learner and a technology enthusiast committed to building impactful solutions through coding. My journey in the world of technology has been fueled by curiosity and a desire to solve real-world problems.</p>
+                <p>With a strong foundation in computer science principles, I thrive on challenges that require critical thinking and creativity. My experiences have taught me the importance of collaboration and continuous learning in the ever-evolving tech landscape.</p>
+                <p>I aim to leverage my skills to develop innovative applications that enhance user experience and contribute positively to society.</p>
+            </div>
+        </div>
+
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="about-content">
+                <p>Proficient in:</p>
+                <ul>
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>Programming Languages (Python, Java)</li>
+                    <li>Database Management (SQL)</li>
+                    <li>Version Control (Git)</li>
+                </ul>
+                <p>Always eager to learn new technologies and improve my skill set.</p>
+            </div>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="about-content">
+                <p>Check out some of the projects I've worked on:</p>
+                <ul>
+                    <li>Personal Portfolio Website</li>
+                    <li>Weather App using API</li>
+                    <li>Task Management Application</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Me</h2>
+            <div class="contact-form">
+                <form action="your_script.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Personal Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.section').forEach((section, index) => {
+            setTimeout(() => {
+                section.classList.add('visible');
+            }, index * 300);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
